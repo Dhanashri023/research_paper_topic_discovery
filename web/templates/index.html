@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Topic Discovery System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <img src="{{ url_for('static', filename='img/logo.svg') }}" alt="logo" class="logo">
+        <div class="brand-text">
+          <h1>Topic Discovery System</h1>
+          <p class="subtitle">Research Paper Topic Discovery</p>
+        </div>
+      </div>
+      <nav class="nav-actions">
+        <form method="POST" class="quick-form">
+          <!-- <label for="n_topics" class="sr-only">Number of topics</label>
+          <input id="n_topics" name="n_topics" type="number" min="2" max="12" value="{{ selected }}" />
+          <button class="btn" type="submit">Generate</button> -->
+        </form>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-grid">
+    <section class="intro glass">
+      <h2>Discover Topics from Research Papers</h2>
+      <p>Choose the number of topics and click <strong>Generate</strong>. Each card below shows top keywords and example papers belonging to that topic.</p>
+      <div class="controls">
+        <form method="POST" class="inline">
+          <label for="n_topics_2">Topics</label>
+          <input id="n_topics_2" name="n_topics" type="number" min="2" max="12" value="{{ selected }}" />
+          <button class="btn btn-accent" type="submit">Regenerate</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="topics-grid">
+      {% for topic in topics %}
+      <article class="topic-card glass">
+        <div class="topic-header">
+          <h3>Topic {{ topic.id }}</h3>
+          <div class="chip">Top words</div>
+        </div>
+        <p class="words">{{ topic.words|join(', ') }}</p>
+        <div class="examples">
+          <h4>Example Papers</h4>
+          <ul>
+            {% for p in topic.examples %}
+            <li>
+              <strong class="paper-title">{{ p.title }}</strong>
+              <p class="paper-abs">{{ p.abstract[:140] }}...</p>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </article>
+      {% endfor %}
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Made with ❤️ • Peach‑Pink Glass × Material UI — Topic Discovery System</p>
+    </div>
+  </footer>
+
+</body>
+</html>

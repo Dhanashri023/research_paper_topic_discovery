@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Research Paper Topic Discovery</title>
+</head>
+<body>
+    <h1>Research Paper Topic Discovery</h1>
+    <form method="POST">
+        <label>Number of Topics:</label>
+        <input type="number" name="n_topics" value="5"><br><br>
+        <label>Top Words per Topic:</label>
+        <input type="number" name="n_top_words" value="8"><br><br>
+        <button type="submit">Run Topic Discovery</button>
+    </form>
+
+    {% if topics %}
+        <h2>Topic Results:</h2>
+        {% for t in topics %}
+            <h3>Topic {{t.topic}}</h3>
+            <p><strong>Keywords:</strong> {{t.words}}</p>
+            <ul>
+            {% for ex in examples[t.topic-1] %}
+                <li><strong>{{ex.title}}</strong> - {{ex.abstract[:150]}}...</li>
+            {% endfor %}
+            </ul>
+        {% endfor %}
+    {% endif %}
+
+</body>
+</html>

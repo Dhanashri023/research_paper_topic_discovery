@@ -1,0 +1,16 @@
+title,abstract
+Automatic Topic Detection for Research Papers,We propose an automatic method for detecting research topics from paper abstracts using TF-IDF and clustering. Experiments show coherent topic groups across computer science subfields.
+Neural Models for Scientific Document Classification,This paper explores neural network architectures applied to scientific document classification and compares them with classical bag-of-words baselines.
+Survey on Topic Modeling Techniques,"A comprehensive survey of topic modeling techniques including LDA, NMF and modern transformer-based approaches with evaluation metrics."
+Biomedical Literature Topic Discovery,We apply topic modeling to biomedical literature to identify emerging themes in genomics and clinical research using domain-specific preprocessing.
+Citation-aware Topic Summarization,Introduce a citation-aware summarization that leverages citation contexts to improve topic summaries and highlight influential works.
+Cross-lingual Topic Identification,Techniques for identifying topics across languages using multilingual embeddings and transfer learning are evaluated on parallel corpora.
+Interactive Visualizations for Topic Exploration,We present an interactive visualization tool that helps researchers explore discovered topics and related documents in large paper collections.
+Mining Trends from Conference Proceedings,Temporal topic modeling applied to conference proceedings to analyze emerging trends and shifts in research focus over time.
+Clustering Research Papers with TF-IDF and KMeans,"A practical guide to clustering research papers using TF-IDF features and KMeans, including evaluation and hyperparameter tuning."
+Evaluating Topic Coherence Metrics,This study compares different topic coherence metrics and their correlation with human judgments on scientific corpora.
+Domain Adaptation for Topic Models,We investigate domain adaptation strategies to transfer topic models trained on one scientific domain to another with minimal labeled data.
+Automated Survey Generation from Topics,Method for generating brief surveys of a field by automatically selecting representative papers per topic and synthesizing summaries.
+Short-Text Topic Modeling for Paper Titles,Approaches for discovering topics from short-text inputs like titles using enriched context and external knowledge bases.
+Keyword Extraction to Aid Topic Discovery,This paper studies keyword extraction algorithms and how extracted keywords improve downstream topic discovery tasks.
+Scaling Topic Discovery to Million-Document Corpora,Engineering techniques and approximation methods to scale topic discovery pipelines to millions of documents with constrained memory.
